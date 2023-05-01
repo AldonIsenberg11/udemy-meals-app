@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native'
-import { createNativeStackNavigator} from '@react-navigation/native-stack'
+import { createNativeStackNavigator} from '@react-navigation/native-stack' // use native stack navigator for better performance versus stack navigator
 
 import CategoriesScreen from './screens/CategoriesScreen';
 import MealsOverviewScreen from './screens/MealsOverviewScreen';
