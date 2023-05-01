@@ -12,7 +12,7 @@ function MealDetailScreen({route, navigation}) {
     const selectedMeal = MEALS.find((meal) => meal.id === mealId);
 
     function headerButtonPressHandler() {
-        console.log("Pressed")
+        console.log("BEAU WAS HERE")
     }
 
     useLayoutEffect(() => {
@@ -25,7 +25,6 @@ function MealDetailScreen({route, navigation}) {
                         onPress={headerButtonPressHandler}
                     />
                 )
-                // return <Button title='Tap me' onPress={headerButtonPressHandler}/>
             }
         })
     }, [navigation, headerButtonPressHandler])
