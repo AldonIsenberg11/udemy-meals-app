@@ -10,7 +10,19 @@ function MealsOverviewScreen({navigation, route}) {
     const displayedMeals = MEALS.filter((mealItem) => mealItem.categoryIds.indexOf(categoryId) >= 0)
 
     function renderMealItem(itemData) {
-        return <MealItem title={itemData.item.title} />
+        const {title, imageUrl, affordability, complexity, duration} = itemData.item;
+
+        const mealItemProps = {
+            title,
+            imageUrl,
+            affordability,
+            complexity,
+            duration,
+        }
+
+        return (
+            <MealItem {...mealItemProps} />
+        )
     }
 
     return (
@@ -20,7 +32,6 @@ function MealsOverviewScreen({navigation, route}) {
                 keyExtractor={(item) => item.id }
                 renderItem={renderMealItem} 
             />
-            {/* <Text>Meals OverView Screen - {categoryId}</Text> */}
         </View>
     )
 }
