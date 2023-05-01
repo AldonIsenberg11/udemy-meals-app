@@ -20,9 +20,10 @@ function MealsOverviewScreen({navigation, route}) {
 
 
     function renderMealItem(itemData) {
-        const {title, imageUrl, affordability, complexity, duration} = itemData.item;
+        const {id, title, imageUrl, affordability, complexity, duration} = itemData.item;
 
         const mealItemProps = {
+            id,
             title,
             imageUrl,
             affordability,

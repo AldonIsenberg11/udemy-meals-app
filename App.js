@@ -5,7 +5,7 @@ import { createNativeStackNavigator} from '@react-navigation/native-stack' // us
 
 import CategoriesScreen from './screens/CategoriesScreen';
 import MealsOverviewScreen from './screens/MealsOverviewScreen';
-import { CATEGORIES } from './data/dummy-data';
+import MealDetailScreen from './screens/MealDetailScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -32,7 +32,7 @@ export default function App() {
           <Stack.Screen 
             name='MealsOverview' 
             component={MealsOverviewScreen}
-            // We used `useLayoutEffect` in the mealsOverviewScreen to set the title of the screen instead of here.
+            // We used `useLayoutEffect` in the mealsOverviewScreen to set the title of the screen instead of passing here.
             // options={({route, navigation}) => {
             //   const { categoryId } = route.params;
             //   const selectedCategory = CATEGORIES.find((category) => category.id === categoryId);
@@ -40,6 +40,10 @@ export default function App() {
             //     title: selectedCategory.title,
             //   }
             // }}
+          />
+          <Stack.Screen
+            name='MealDetail'
+            component={MealDetailScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
